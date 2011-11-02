@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Browser bugs</title>
+  	<style type="text/css">
+      .leftdiv{position:absolute;}/* Using float:left fixes this problem */
+      .rightdiv{margin-left:100px;}
+      
+      .absdiv1, .absdiv2, .absdiv3{position:absolute; background:#ff0000; width:100px;}
+      .absdiv2{margin-left:110px;}
+      .absdiv3{margin-left:220px;}
+  	</style>
+  </head>
+<body>
+
+  <h1>IE7-8</h1>
+  <h4>Input's have a different default width.</h4>
+  <p>Make sure to specify. Otherwise other browsers will look diff</p>
+  <input type="text" />
+  <input type="text" />
+  
+  <h1>IE7</h1>
+  <h4>Left div (pos:absolute) sticks with right div's margin.</h4>
+  <p>Solution: use float on left div, and if necessary a clear fix (if you use more than 2).</p>
+  <div class="leftdiv">LeftDiv</div>
+  <div class="rightdiv">RightDiv</div>
+  
+  <h4>absolutes</h4>
+  <p>This actually works.. but sometimes doesn't.. not sure.</p>
+  <div>
+    <div class="absdiv1">LeftDiv</div>
+    <div class="absdiv2">RightDiv</div>
+    <div class="absdiv3">RightDiv</div>
+  </div>
+  
+</body>
+</html>
