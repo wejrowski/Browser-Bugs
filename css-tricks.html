@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>CSS Tricks</title>
+    <style>
+      #image-float-left ol.solution1{
+        overflow:hidden;
+      }
+      #image-float-left ol.solution2{
+        list-style-position: inside;
+      }
+
+    </style>
+  </head>
+<body>
+<h1>CSS Tricks</h1>
+<hr />
+<div id="image-float-left">
+  <h2>Image float left with LI list</h2>
+  <p><b>The problem</b> is, the numbers appear too far to the left.</p>
+  <img src="http://farm3.staticflickr.com/2536/3878689664_f22a30837c_m.jpg" style="float:left;" />
+  <ol>
+    <li>First item - Quisque nisi elit, dictum luctus aliquet ut, commodo sit amet erat. Ut tempor, purus nec tempus aliquet, purus lectus semper erat, quis commodo arcu lorem eget nunc. Maecenas sapien dui, commodo vitae fringilla quis.</li>
+    <li>Second item - Celerisque at libero. Morbi et mi nec sapien interdum gravida. Aliquam vitae odio luctus mauris ultrices commodo sed quis ante. Mauris tortor metus, tincidunt at commodo dapibus, pulvinar id ante. Praesent ut orci sapien. Phasellus in est eu ante volutpat sodales. Mauris eu libero augue, in mollis nunc.</li>
+    <li>Third item - Duis facilisis erat id massa faucibus vitae adipiscing nunc tempor. Aenean pellentesque tellus at mauris aliquet sollicitudin. Vestibulum bibendum, lectus quis vulputate aliquam, nibh mauris elementum neque, sit amet euismod erat est feugiat nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pellentesque dui a nibh consequat eget gravida odio molestie. </li>
+    <li>Fourth item - Pellentesque molestie diam a augue consectetur pretium. Donec aliquet rutrum sem, et fringilla nisl dignissim sed. Donec arcu sem, suscipit vitae eleifend a, convallis vitae metus. Suspendisse potenti. Maecenas bibendum consectetur sem eu malesuada. In enim augue, fringilla ac venenatis sit amet, malesuada in justo. Integer adipiscing pretium ullamcorper. Vestibulum lobortis, tellus quis tristique dapibus, dui sapien ullamcorper arcu, et mollis odio metus at odio. Mauris et ligula elit, a pretium turpis. Cras placerat arcu sit amet nisl cursus commodo. Ut tristique quam ac orci tincidunt non adipiscing turpis fringilla.</li>
+    <li>Fifth item - Equis dapibus odio rutrum sit amet. Vestibulum in nulla purus. Phasellus suscipit faucibus ultrices. Fusce ut augue vel tortor eleifend tempus nec non elit. Sed elit velit, molestie nec sollicitudin et, cursus quis ligula. Fusce nec justo tortor, a lacinia erat</li>
+  </ol>
+  <h3>There are a couple solutions</h3>
+  <p><b>1. ol{overflow: hidden;}</b> -- This makes the entire list flush right with the image. The only problem is if you have continuing content though it will go back to the left which may look funky.</p>
+  <img src="http://farm3.staticflickr.com/2536/3878689664_f22a30837c_m.jpg" style="float:left;" />
+  <ol class="solution1">
+    <li>First item - Quisque nisi elit, dictum luctus aliquet ut, commodo sit amet erat. Ut tempor, purus nec tempus aliquet, purus lectus semper erat, quis commodo arcu lorem eget nunc. Maecenas sapien dui, commodo vitae fringilla quis.</li>
+    <li>Second item - Celerisque at libero. Morbi et mi nec sapien interdum gravida. Aliquam vitae odio luctus mauris ultrices commodo sed quis ante. Mauris tortor metus, tincidunt at commodo dapibus, pulvinar id ante. Praesent ut orci sapien. Phasellus in est eu ante volutpat sodales. Mauris eu libero augue, in mollis nunc.</li>
+    <li>Third item - Duis facilisis erat id massa faucibus vitae adipiscing nunc tempor. Aenean pellentesque tellus at mauris aliquet sollicitudin. Vestibulum bibendum, lectus quis vulputate aliquam, nibh mauris elementum neque, sit amet euismod erat est feugiat nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pellentesque dui a nibh consequat eget gravida odio molestie. </li>
+    <li>Fourth item - Pellentesque molestie diam a augue consectetur pretium. Donec aliquet rutrum sem, et fringilla nisl dignissim sed. Donec arcu sem, suscipit vitae eleifend a, convallis vitae metus. Suspendisse potenti. Maecenas bibendum consectetur sem eu malesuada. In enim augue, fringilla ac venenatis sit amet, malesuada in justo. Integer adipiscing pretium ullamcorper. Vestibulum lobortis, tellus quis tristique dapibus, dui sapien ullamcorper arcu, et mollis odio metus at odio. Mauris et ligula elit, a pretium turpis. Cras placerat arcu sit amet nisl cursus commodo. Ut tristique quam ac orci tincidunt non adipiscing turpis fringilla.</li>
+    <li>Fifth item - Equis dapibus odio rutrum sit amet. Vestibulum in nulla purus. Phasellus suscipit faucibus ultrices. Fusce ut augue vel tortor eleifend tempus nec non elit. Sed elit velit, molestie nec sollicitudin et, cursus quis ligula. Fusce nec justo tortor, a lacinia erat</li>
+  </ol>
+  
+  
+  <p><b>2. ol li{list-style-position: inside;}</b></p>
+  <img src="http://farm3.staticflickr.com/2536/3878689664_f22a30837c_m.jpg" style="float:left;" />
+  <ol class="solution2">
+    <li>First item - Quisque nisi elit, dictum luctus aliquet ut, commodo sit amet erat. Ut tempor, purus nec tempus aliquet, purus lectus semper erat, quis commodo arcu lorem eget nunc. Maecenas sapien dui, commodo vitae fringilla quis.</li>
+    <li>Second item - Celerisque at libero. Morbi et mi nec sapien interdum gravida. Aliquam vitae odio luctus mauris ultrices commodo sed quis ante. Mauris tortor metus, tincidunt at commodo dapibus, pulvinar id ante. Praesent ut orci sapien. Phasellus in est eu ante volutpat sodales. Mauris eu libero augue, in mollis nunc.</li>
+    <li>Third item - Duis facilisis erat id massa faucibus vitae adipiscing nunc tempor. Aenean pellentesque tellus at mauris aliquet sollicitudin. Vestibulum bibendum, lectus quis vulputate aliquam, nibh mauris elementum neque, sit amet euismod erat est feugiat nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pellentesque dui a nibh consequat eget gravida odio molestie. </li>
+    <li>Fourth item - Pellentesque molestie diam a augue consectetur pretium. Donec aliquet rutrum sem, et fringilla nisl dignissim sed. Donec arcu sem, suscipit vitae eleifend a, convallis vitae metus. Suspendisse potenti. Maecenas bibendum consectetur sem eu malesuada. In enim augue, fringilla ac venenatis sit amet, malesuada in justo. Integer adipiscing pretium ullamcorper. Vestibulum lobortis, tellus quis tristique dapibus, dui sapien ullamcorper arcu, et mollis odio metus at odio. Mauris et ligula elit, a pretium turpis. Cras placerat arcu sit amet nisl cursus commodo. Ut tristique quam ac orci tincidunt non adipiscing turpis fringilla.</li>
+    <li>Fifth item - Equis dapibus odio rutrum sit amet. Vestibulum in nulla purus. Phasellus suscipit faucibus ultrices. Fusce ut augue vel tortor eleifend tempus nec non elit. Sed elit velit, molestie nec sollicitudin et, cursus quis ligula. Fusce nec justo tortor, a lacinia erat</li>
+  </ol>
+</div>
+
+<hr />
+</body>
+
+</html>
