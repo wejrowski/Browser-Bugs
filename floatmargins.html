@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>float issue</title>
+  <style>
+
+    #side, #side2, #footer, #footer2{ padding: 6px; }
+    #side{ 
+      float:left;
+      width: 100px;
+      background: red;
+      color: white;
+    }
+    #main{
+      float: left;
+      width: 800px;
+    }
+    #footer{ 
+      background: yellow;
+      margin-top: 50px;
+      clear: both;
+    }
+    #side2{ 
+      float:left;
+      width: 100px;
+      background: red;
+      color: white;
+      margin-bottom: 50px;
+    }
+    #main2{
+      float: left;
+      width: 800px;
+
+      margin-bottom: 50px;
+    }
+    #footer2{ 
+      background: yellow;
+      /*margin-top: 50px;*/
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+<div id="side">this is a sidebar</div>
+<div id="main">This is the main here.<br />This is the main here.<br />This is the main here.<br />This is the main here.<br />This is the main here.<br /></div>
+<div id="footer">Footer here. Clear:both; martin-top: 50px;<br />If the two top elements are floating, and this does clear:both, margin-top won't affect anything here.</div>
+
+<h2>Solution:</h2>
+<div id="side2">this is a sidebar. This should also have margin-bottom: 50px;</div>
+<div id="main2">This is the main here.<br />This is the main here.<br />This is the main here.<br />This is the main here.<br />THIS has margin-bottom: 50px;</div>
+<div id="footer2">Footer here<br />clear: both; no margin</div>
+
+
+</body>
+</html>
